@@ -8,30 +8,51 @@
 
 package com.company;
 import java.util.ArrayList;
+import java.util.Collections;
 
 class ArrayListDemo {
     public static void main(String args[]) {
-// create an array list
-        ArrayList<String> al = new ArrayList<>(); // this is al, as in letter 'L', short for array-list
+// Create an array list
+        ArrayList<String> aList = new ArrayList<>();
 
-        System.out.println("Initial size of al: " + al.size());
-// add elements to the array list
-        al.add("C");
-        al.add("A");
-        al.add("E");
-        al.add("B");
-        al.add("D");
-        al.add("F");
-        al.add(1, "A2");
+        System.out.println("Initial size of aList: " + aList.size());
+// Add elements to the array list
+        aList.add("C");
+        aList.add("A");
+        aList.add("E");
+        aList.add("B");
+        aList.add("D");
+        aList.add("F");
+        aList.add(1, "A2");
 
-        System.out.println("Size of al after additions: " + al.size());
-// display the array list
-        System.out.println("Contents of al: " + al);
+// Print the size of array list
+        System.out.println("\n Size after additions: " + aList.size());
+
+// Display the array list
+        System.out.println("\n aList: " + aList);
+
 // Remove elements from the array list
-        al.remove("F");
-//        al.remove("G");
-        al.remove("G");
-        System.out.println("Size of al after deletions: " + al.size());
-        System.out.println("Contents of al: " + al);
+        aList.remove("F");
+        System.out.println("\n Size after removal: " + aList.size());
+        System.out.println("aList: " + aList);
+
+//        =============================
+
+        String[] values = { "cat", "dog", "bird" };
+        ArrayList<String> values2 = new ArrayList<>();
+        values2.add("cat");
+        values2.add("dog");
+        values2.add("bird");
+
+//         Create a one-element ArrayList.
+        ArrayList<String> list = new ArrayList<>();
+        list.add("elephant");
+        System.out.println(list);
+
+//         Add all elements to the ArrayList from an array.
+        Collections.addAll(list, values); // Elements to be added may be specified individually or as an array.
+
+//         Display our result.
+        System.out.println(list);
     }
 }
